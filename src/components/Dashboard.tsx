@@ -179,7 +179,7 @@ export const Dashboard: React.FC = () => {
       </div>
 
       {/* Quick stats */}
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
+      <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
         <InspectTooltip text="TIERS[tierIndex] from context" active={portfolioMode}>
           <div className={`${card} p-4`}>
             <p className="text-slate-400 dark:text-slate-500 text-xs uppercase tracking-wider mb-2">
@@ -311,7 +311,7 @@ export const Dashboard: React.FC = () => {
 
       {/* Habit logger */}
       <div className={`${card} p-5`}>
-        <div className="flex items-center justify-between mb-4">
+        <div className="flex items-center justify-between mb-4 flex-wrap gap-2">
           <h3 className="text-slate-900 dark:text-white font-semibold">Log a Habit</h3>
           <div className="flex gap-1.5 flex-wrap">
             {categories.map((cat) => (

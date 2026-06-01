@@ -123,7 +123,7 @@ export const Challenges: React.FC = () => {
           { label: 'Completed', value: completed.length, color: 'text-amber-600 dark:text-amber-400' },
           { label: 'Total XP',  value: stats.xp,         color: 'text-blue-600 dark:text-blue-400' },
         ].map((s) => (
-          <div key={s.label} className={`${card} p-4 text-center`}>
+          <div key={s.label} className={`${card} p-3 sm:p-4 text-center`}>
             <p className={`text-2xl font-bold ${s.color}`}>{s.value}</p>
             <p className="text-slate-400 dark:text-slate-500 text-xs mt-1">{s.label}</p>
           </div>
@@ -235,7 +235,7 @@ export const Challenges: React.FC = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {filtered.map((challenge) => {
             const isActive = active.some((c) => c.id === challenge.id);
             const isDone = completed.includes(challenge.id);

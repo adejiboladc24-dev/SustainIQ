@@ -543,7 +543,7 @@ ${profile ? `I see your current focus is **${profile.ecoFocus}**, ${profile.name
 
       {/* Chat window */}
       <div className="flex-1 bg-white dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 rounded-xl backdrop-blur-md flex flex-col overflow-hidden transition-colors duration-300">
-        <div className="flex-1 overflow-y-auto p-5 space-y-4" style={{ maxHeight: '520px' }}>
+        <div className="flex-1 overflow-y-auto p-4 sm:p-5 space-y-4" style={{ maxHeight: '420px' }}>
           {messages.map((msg) => (
             <div key={msg.id} className={`flex gap-3 ${msg.role === 'user' ? 'flex-row-reverse' : ''}`}>
               {/* Avatar */}

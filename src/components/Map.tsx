@@ -132,7 +132,7 @@ export const Map: React.FC = () => {
         })}
       </div>
 
-      <div className="rounded-xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-2xl" style={{ height: '460px' }}>
+      <div className="rounded-xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-2xl" style={{ height: '320px' }}>
         <MapContainer center={center} zoom={13} style={{ height: '100%', width: '100%' }} zoomControl={true}>
           <TileLayer
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -162,7 +162,7 @@ export const Map: React.FC = () => {
         </MapContainer>
       </div>
 
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+      <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
         {(Object.entries(ASSET_CONFIG) as [AssetType, typeof ASSET_CONFIG[AssetType]][]).map(([type, cfg]) => (
           <div key={type} className="bg-white dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 rounded-xl p-3 flex items-center gap-3 transition-colors duration-300">
             <div className="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0" style={{ background: cfg.color + '20', color: cfg.color }}>

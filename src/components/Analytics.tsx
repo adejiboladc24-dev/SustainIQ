@@ -99,7 +99,7 @@ export const Analytics: React.FC = () => {
       </div>
 
       {/* Summary stats */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+      <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
         {[
           { label: 'Weekly Impact', value: totalWeeklyImpact.toFixed(0), unit: 'pts', color: 'text-emerald-600 dark:text-emerald-400' },
           { label: 'Daily Average',  value: avgDaily,                     unit: 'pts', color: 'text-teal-600 dark:text-teal-400' },
@@ -149,7 +149,7 @@ export const Analytics: React.FC = () => {
         </div>
       </InspectWrap>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 gap-4">
         {/* Radar chart */}
         <InspectWrap text="Recharts RadarChart — eco-discipline performance" active={portfolioMode}>
           <div className={`${card} p-5`}>
@@ -159,8 +159,8 @@ export const Analytics: React.FC = () => {
                 Eco-Discipline Radar
               </h3>
             </div>
-            <ResponsiveContainer width="100%" height={260}>
-              <RadarChart data={radarData} margin={{ top: 10, right: 20, bottom: 10, left: 20 }}>
+          <ResponsiveContainer width="100%" height={260}>
+            <RadarChart data={radarData} margin={{ top: 10, right: 20, bottom: 10, left: 20 }}>
                 <PolarGrid stroke={gridColor} />
                 <PolarAngleAxis dataKey="subject" stroke={axisColor} tick={{ fontSize: 11 }} />
                 <PolarRadiusAxis stroke={gridColor} tick={{ fontSize: 9 }} domain={[0, 100]} />
